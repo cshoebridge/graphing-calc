@@ -8,10 +8,10 @@ const Figure = ({viewXMax, viewYMax, viewXMin, viewYMin}) => {
     const [viewWidth, viewHeight] = [viewXMax-viewXMin, viewYMax-viewYMin];
 
     return (
-        <svg width={750} height={750} viewBox={`${viewXMin*AXIS_PADDING} ${viewYMin*AXIS_PADDING} ${viewWidth*AXIS_PADDING} ${viewHeight*AXIS_PADDING}`}>
+        <svg width={700} height={700} viewBox={`${viewXMin*AXIS_PADDING} ${viewYMin*AXIS_PADDING} ${viewWidth*AXIS_PADDING} ${viewHeight*AXIS_PADDING}`}>
             <Grid spacing={viewWidth}/>
             <Axes viewWidth={viewWidth} viewHeight={viewHeight}/>
-            <Curve color={"red"} width={viewWidth/150} domain={{min: viewXMin, max: viewXMax}} func={(x) => x**2}/>
+            <Curve color={"red"} width={viewWidth/150} domain={{min: viewXMin, max: viewXMax}} func={(x) => Math.log(x)}/>
         </svg>
     );
 }
