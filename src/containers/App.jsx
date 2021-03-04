@@ -1,9 +1,11 @@
 import './App.css';
-
+import Figure from '../components/Figure.jsx';
 
 const App = () => {
   return (
-    <h1>Working!</h1>
+    <div className="App">
+      <Figure />
+    </div>
   );
 }
 
