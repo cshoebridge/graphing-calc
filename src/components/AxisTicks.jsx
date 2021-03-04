@@ -11,14 +11,14 @@ const AxisTicks = ({spacing, count=BASE_GRIDLINE_COUNT}) => {
     const horizontalTicks = [];
     for (let i = -spacing; i < spacing; i+=LINES_PER_TICK*spacing/count) {
         horizontalTicks.push(
-            <text text-anchor="middle" x={i} y={tickYOffset} fontSize={fontSize}>{i}</text>
+            <text key={`h-tick-${i}`} textAnchor="middle" x={i} y={tickYOffset} fontSize={fontSize}>{i}</text>
         );
     }
 
     const verticalTicks = [];
     for (let i = -spacing; i < spacing; i+=LINES_PER_TICK*spacing/count) {
         verticalTicks.push(
-            <text x={tickXOffset} y={i + spacing/(count*7)} fontSize={fontSize}>{-i}</text>
+            <text key={`v-tick-${i}`} x={tickXOffset} y={i + spacing/(count*7)} fontSize={fontSize}>{-i}</text>
         );
     }
     return (

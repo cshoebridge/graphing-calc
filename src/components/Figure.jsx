@@ -11,7 +11,7 @@ const Figure = ({viewXMax, viewYMax, viewXMin, viewYMin}) => {
         <svg width={750} height={750} viewBox={`${viewXMin*AXIS_PADDING} ${viewYMin*AXIS_PADDING} ${viewWidth*AXIS_PADDING} ${viewHeight*AXIS_PADDING}`}>
             <Grid spacing={viewWidth}/>
             <Axes viewWidth={viewWidth} viewHeight={viewHeight}/>
-            <Curve color={"red"} width={viewWidth/150} domain={{min: viewXMin, max: viewXMax}} func={(x) => x*x}/>
+            <Curve color={"red"} width={viewWidth/150} domain={{min: viewXMin, max: viewXMax}} func={(x) => x**2}/>
         </svg>
     );
 }

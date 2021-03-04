@@ -9,18 +9,14 @@ export const Grid = ({ spacing, count=BASE_GRIDLINE_COUNT }) => {
     const verticalLines = [];
     for (let i = -spacing; i < spacing; i+=spacing/count) {
         verticalLines.push(
-            <g>
-                <line key={`vertical-line-${i}`} x1={i} y1={-spacing} x2={i} y2={spacing} stroke={GRIDLINE_COLOR} strokeWidth={gridlineWidth}/>
-            </g>
+            <line key={`vertical-line-${i}`} x1={i} y1={-spacing} x2={i} y2={spacing} stroke={GRIDLINE_COLOR} strokeWidth={gridlineWidth}/>
         );
     }
 
     const horizontalLines = [];
     for (let i = -spacing; i < spacing; i+=spacing/count) {
         horizontalLines.push(
-            <g>
-                <line key={`horizontal-line-${i}`} x1={-spacing} y1={i} x2={spacing} y2={i} stroke={GRIDLINE_COLOR} strokeWidth={gridlineWidth}/>
-            </g>
+            <line key={`horizontal-line-${i}`} x1={-spacing} y1={i} x2={spacing} y2={i} stroke={GRIDLINE_COLOR} strokeWidth={gridlineWidth}/>
         );
     }
 
