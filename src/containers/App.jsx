@@ -10,7 +10,7 @@ const App = () => {
         <InputWidget />
       </div>
       <div className="figure">
-        <Figure viewXMax={10} viewYMax={10} viewXMin={-10} viewYMin={-10} />
+        <Figure viewXMax={1} viewYMax={1} viewXMin={-2} viewYMin={-3} />
       </div>
     </div>
   );
