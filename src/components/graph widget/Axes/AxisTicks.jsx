@@ -1,5 +1,5 @@
 import React from 'react';
-import { BASE_GRIDLINE_COUNT } from "./Grid";
+import { BASE_GRIDLINE_COUNT } from "../Grid";
 
 const LINES_PER_TICK = 5
 

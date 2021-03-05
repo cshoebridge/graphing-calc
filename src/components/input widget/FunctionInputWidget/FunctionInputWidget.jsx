@@ -1,4 +1,4 @@
-import FunctionField from "./FunctionField";
+import FunctionField from "../FunctionField/FunctionField.jsx";
 
 const FunctionInputWidget = ({fieldCount}) => {
     const fields = [];

@@ -1,5 +1,5 @@
-import FunctionInputWidget from "./FunctionInputWidget"
-import InputHeader from "./InputHeader"
+import FunctionInputWidget from "./FunctionInputWidget/FunctionInputWidget.jsx"
+import InputHeader from "./InputHeader/InputHeader.jsx"
 
 const InputWidget = () => {
     return (

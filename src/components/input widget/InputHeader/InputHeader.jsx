@@ -1,4 +1,4 @@
-import AddFunctionButton from "./AddFunctionButton"
+import AddFunctionButton from "../AddFunctionButton/AddFunctionButton.jsx"
 
 const InputHeader = () => {
     return (

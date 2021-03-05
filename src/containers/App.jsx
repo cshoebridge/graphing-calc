@@ -1,6 +1,6 @@
 import './App.css';
-import Figure from '../components/Figure.jsx';
-import InputWidget from '../components/InputWidget'
+import Figure from '../components/graph widget/Figure.jsx';
+import InputWidget from '../components/input widget/InputWidget.jsx'
 
 const App = () => {
 

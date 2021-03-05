@@ -1,4 +1,4 @@
-import Axes from "./Axes"
+import Axes from "./Axes/Axes.jsx"
 import Curve from "./Curve"
 import { Grid } from "./Grid";
 
