@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const BASE_GRIDLINE_COUNT = 40;
+export const BASE_GRIDLINE_COUNT = 50;
 const GRIDLINE_COLOR = "#b0b0b0"
 const DARKERLINE_COLOR = "grey";
 
