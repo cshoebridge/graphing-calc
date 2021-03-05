@@ -1,13 +1,13 @@
 import FunctionInputWidget from "./FunctionInputWidget/FunctionInputWidget.jsx"
 import InputHeader from "./InputHeader/InputHeader.jsx"
 
-const InputWidget = () => {
+const InputWidget = ({count, incrementCount, addFunction}) => {
     return (
       <div>
         <div className="bg-light-gray bb pa2">
-          <InputHeader />
+          <InputHeader incrementCount={incrementCount}/>
         </div>
-          <FunctionInputWidget fieldCount={3}/>
+          <FunctionInputWidget fieldCount={count} addFunction={addFunction}/>
       </div>
     )
 }

@@ -1,9 +1,9 @@
 import AddFunctionButton from "../AddFunctionButton/AddFunctionButton.jsx"
 
-const InputHeader = () => {
+const InputHeader = ({incrementCount}) => {
     return (
-        <AddFunctionButton />
-    )
+        <AddFunctionButton onClick={incrementCount}/>
+    );
 }
 
 export default InputHeader;

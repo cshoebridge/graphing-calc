@@ -1,10 +1,10 @@
-import FunctionField from "../FunctionField/FunctionField.jsx";
+import FunctionField from "./FunctionField/FunctionField.jsx";
 
-const FunctionInputWidget = ({fieldCount}) => {
+const FunctionInputWidget = ({fieldCount, addFunction}) => {
     const fields = [];
     for (let i = 0; i < fieldCount; i++) {
         fields.push(
-            <FunctionField key={`inputfield-${i}`}/>
+            <FunctionField key={`inputfield-${i}`} addFunction={addFunction} />
         );
     }
 

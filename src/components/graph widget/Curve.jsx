@@ -10,7 +10,6 @@ const Curve = ({strokeWidth, color, func, domain}) => {
             coords.push({x: x, y: func(x)});
         }
     }
-    console.log(coords);
 
     return (
     <g className="curve">
