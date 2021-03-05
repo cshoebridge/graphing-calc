@@ -3,16 +3,6 @@
   grid-template-columns: 2fr 5fr;
 }
 
-.inputs {
-  padding: 3rem 1rem 3rem 3rem;
-  background-color: lightblue;
-  border-right: 2px solid black;
-}
-
-.addButton {
-  text-align: right;
-}
-
 .figure {
   padding: 3rem 1rem;
   display: flex;

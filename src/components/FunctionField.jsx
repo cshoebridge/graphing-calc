@@ -7,7 +7,7 @@ addStyles();
 
 const FunctionField = () => {
     return (
-        <div className="grow">
+        <div>
           <EditableMathField latex={'\\frac{1}{\\sqrt{2}}\\cdot 2'} onChange={() => {return}}/>
         </div>
     )
