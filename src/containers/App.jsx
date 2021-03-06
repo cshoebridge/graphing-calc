@@ -15,7 +15,7 @@ const App = () => {
         <InputWidget count={functionCount} incrementCount={() => setFunctionCount(functionCount + 1)} addFunction={(func) => functions.push(func)}/>
       </div>
       <div className="figure">
-        <Figure viewXMax={1} viewYMax={3} viewXMin={-2} viewYMin={-1} />
+        <Figure viewXMax={5} viewYMax={5} viewXMin={-5} viewYMin={-5} />
       </div>
     </div>
   );

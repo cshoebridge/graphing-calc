@@ -3,5 +3,19 @@
     background-color: white;
     width: 96%;
     padding: 3% 0 3% 1%;
-    margin: 1% 0 1% 1%;
+}
+
+.mq-focused {
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none !important;
+}
+
+.function-field-container {
+    border: black 1px solid;
+    padding: 5px;
+}
+
+.field-delete {
+
 }

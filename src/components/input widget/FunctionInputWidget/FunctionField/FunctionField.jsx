@@ -5,19 +5,19 @@ import { GREEK_ALPHABET } from '../../../../math helpers/mathConstants.js'
 
 addStyles();
 
-
-
 const FunctionField = ({addFunction}) => {
   const [latex, setLatex] = useState('');
 
   return (
-    <div>
+    <div className="function-field-container">
       <EditableMathField
+        style={{border: "none"}}
         latex={''}
         onChange={(mathField) => {
           setLatex(mathField.latex());
         }}
       config={{autoCommands: `${GREEK_ALPHABET} sum int`}}/>
+      <i className="field-delete">X</i>
       <p>{latex}</p>
     </div>
   );
