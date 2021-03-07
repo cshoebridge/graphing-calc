@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { addStyles, EditableMathField } from 'react-mathquill';
 import './FunctionField.css';
 import { GREEK_ALPHABET } from '../../../../math helpers/mathConstants.js'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 addStyles();
 
@@ -18,7 +20,9 @@ const FunctionField = ({fieldKey, changeFunction, removeFunction}) => {
           setLatex(mathField.latex());
         }}
       config={{autoCommands: `${GREEK_ALPHABET} sum int`}}/>
-      <i className="field-delete" onClick={() => removeFunction(fieldKey)}>X</i>
+      <span className="field-delete" onClick={() => removeFunction(fieldKey)}>
+        <FontAwesomeIcon icon="times"/>
+      </span>
       <p>{latex}</p>
     </div>
   );

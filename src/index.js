@@ -4,6 +4,10 @@ import './index.css';
 import App from './containers/App.jsx';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faTimes);
 
 ReactDOM.render(
   <React.StrictMode>
