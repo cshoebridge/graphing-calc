@@ -5,7 +5,7 @@ import { GREEK_ALPHABET } from '../../../../math helpers/mathConstants.js'
 
 addStyles();
 
-const FunctionField = ({addFunction}) => {
+const FunctionField = ({fieldKey, addFunction}) => {
   const [latex, setLatex] = useState('');
 
   return (
@@ -14,6 +14,7 @@ const FunctionField = ({addFunction}) => {
         style={{border: "none"}}
         latex={''}
         onChange={(mathField) => {
+          addFunction(mathField.latex(), fieldKey);
           setLatex(mathField.latex());
         }}
       config={{autoCommands: `${GREEK_ALPHABET} sum int`}}/>
