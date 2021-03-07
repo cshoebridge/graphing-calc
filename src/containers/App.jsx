@@ -4,7 +4,7 @@ import InputWidget from '../components/input widget/InputWidget.jsx'
 import { useEffect, useState } from 'react';
 
 const App = () => {
-  const [functions, setFunctions] = useState({});
+  const [functions, setFunctions] = useState({'inputfield-1': ''});
 
   useEffect(() => console.log(functions), [functions]);
 
@@ -14,16 +14,20 @@ const App = () => {
         <InputWidget
           functions={functions}
           addFunction={() => {
-            setFunctions(
-              {...functions, [`inputfield-${Object.keys(functions).length + 1}`]: ''}
-              )
-          }}
-          changeFunction={(func, fieldKey) => setFunctions({...functions, [fieldKey]: func })}
+            setFunctions(functions => ({...functions, [`inputfield-${Object.keys(functions).length + 1}`]: ''})  )
+          }
+          }
+          changeFunction={(func, fieldKey) => {
+              setFunctions(functions => ({...functions, [fieldKey]: func}));
+            }
+          }
           removeFunction={(fieldKey) => {
-            console.log('field key: ',fieldKey)
-            const {[fieldKey]: omit, ...res} = functions;
-            setFunctions(res);
-          }}
+              setFunctions(functions => {
+                const {[fieldKey]: omit, ...rest} = functions;
+                return rest;
+              });
+            }
+          }
         />
       </div>
       <div className="figure">

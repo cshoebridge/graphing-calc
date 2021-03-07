@@ -18,7 +18,7 @@ const FunctionField = ({fieldKey, changeFunction, removeFunction}) => {
           setLatex(mathField.latex());
         }}
       config={{autoCommands: `${GREEK_ALPHABET} sum int`}}/>
-      <i className="field-delete" onClick={(fieldKey) => removeFunction(fieldKey)}>X</i>
+      <i className="field-delete" onClick={() => removeFunction(fieldKey)}>X</i>
       <p>{latex}</p>
     </div>
   );
