@@ -2,14 +2,18 @@ import FunctionInputWidget from "./FunctionInputWidget/FunctionInputWidget.jsx"
 import InputHeader from "./InputHeader/InputHeader.jsx"
 import Scroll from "./Scroll.jsx";
 
-const InputWidget = ({count, incrementCount, addFunction}) => {
+const InputWidget = ({functions, addFunction, changeFunction, removeFunction}) => {
     return (
       <div>
         <div className="bg-light-gray bb pa2">
-          <InputHeader incrementCount={incrementCount}/>
+          <InputHeader addFunction={addFunction}/>
         </div>
         <Scroll>
-          <FunctionInputWidget fieldCount={count} addFunction={addFunction}/>
+          <FunctionInputWidget 
+            functions={functions} 
+            changeFunction={changeFunction} 
+            removeFunction={removeFunction}
+          />
         </Scroll>
       </div>
     )
