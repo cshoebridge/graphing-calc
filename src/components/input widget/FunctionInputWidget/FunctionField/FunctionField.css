@@ -13,10 +13,13 @@
 
 .function-field-container {
     border: black 1px solid;
+    position: relative;
     padding: 5px;
 }
 
 .field-delete {
-    position: relative;
-    
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    margin: 1% 3%;
 }

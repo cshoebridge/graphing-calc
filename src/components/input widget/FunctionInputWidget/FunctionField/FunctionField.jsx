@@ -20,7 +20,7 @@ const FunctionField = ({fieldKey, changeFunction, removeFunction}) => {
           setLatex(mathField.latex());
         }}
       config={{autoCommands: `${GREEK_ALPHABET} sum int`}}/>
-      <span className="field-delete" onClick={() => removeFunction(fieldKey)}>
+      <span className="field-delete dim" onClick={() => removeFunction(fieldKey)}>
         <FontAwesomeIcon icon="times"/>
       </span>
       <p>{latex}</p>
