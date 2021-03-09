@@ -1,4 +1,3 @@
-import { useState } from 'react';
 //import { addStyles, EditableMathField } from 'react-mathquill';
 import './FunctionField.css';
 //import { GREEK_ALPHABET } from '../../../../math helpers/mathConstants.js'
@@ -36,14 +35,18 @@ const FunctionField = ({fieldKey, changeFunction, removeFunction}) => {
       <input className="function-in"
         type="text"
         onChange={(event) => {
+          let val = event.target.value;
+          if (!val.includes('=')) {
+            val = `$f(x)=${val}`;
+          }
           try {
-            const newFunction = evaluate(event.target.value);
+            const newFunction = evaluate(val);
             if (isFunctionValid(newFunction)) {
               changeFunction(newFunction, fieldKey);
             }
           }
           catch (error) {
-            console.log('invalid function syntax: ', event.target.value);
+            console.log('invalid function syntax: ', val);
           }
         }}
       
