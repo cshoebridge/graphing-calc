@@ -31,7 +31,13 @@ const App = () => {
         />
       </div>
       <div className="figure">
-        <Figure viewXMax={5} viewYMax={5} viewXMin={-5} viewYMin={-5} />
+        <Figure 
+          viewXMax={10} 
+          viewYMax={10} 
+          viewXMin={-10} 
+          viewYMin={-10} 
+          functions={Object.values(functions).filter(func => typeof func === 'function')}
+        />
       </div>
     </div>
   );
