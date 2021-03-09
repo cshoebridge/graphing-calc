@@ -14,12 +14,19 @@ const Figure = ({viewXMax, viewYMax, viewXMin, viewYMin, functions}) => {
             <Axes viewWidth={viewWidth} viewHeight={viewHeight}/>
             {
                 functions.map((func, i) => 
-                    <Curve key={`curve-${i}`}
-                        color={CURVE_COLORS[i % CURVE_COLORS.length]} 
-                        strokeWidth={viewWidth/200} 
-                        domain={{min: viewXMin, max: viewXMax}} 
-                        range={{min: viewYMin, max: viewYMax}} 
-                        func={(x) => func(x)}/>
+                    {
+                        if (typeof func === 'function') {
+                            return <Curve key={`curve-${i}`}
+                                color={CURVE_COLORS[i % CURVE_COLORS.length]} 
+                                strokeWidth={viewWidth/200} 
+                                domain={{min: viewXMin, max: viewXMax}} 
+                                range={{min: viewYMin, max: viewYMax}} 
+                                func={(x) => func(x)}/>
+                        }
+                        else {
+                            return null;
+                        }
+                    }
                 )
             }
            

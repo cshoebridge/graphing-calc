@@ -22,8 +22,13 @@ const isFunctionValid = (func, bottom=-2, top=2) => {
     if (typeof func(i) === 'number') {
       return true;
     }
-    return false;
   }
+  console.log('function failed validity test')
+  return false;
+}
+
+const isEmpty = (str) => {
+  return str === '';
 }
 
 
@@ -36,6 +41,10 @@ const FunctionField = ({fieldKey, changeFunction, removeFunction}) => {
         type="text"
         onChange={(event) => {
           let val = event.target.value;
+          if (isEmpty(val)) {
+            changeFunction('', fieldKey);
+            return;
+          }
           if (!val.includes('=')) {
             val = `$f(x)=${val}`;
           }
@@ -46,7 +55,7 @@ const FunctionField = ({fieldKey, changeFunction, removeFunction}) => {
             }
           }
           catch (error) {
-            console.log('invalid function syntax: ', val);
+            return;
           }
         }}
       

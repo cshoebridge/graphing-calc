@@ -24,7 +24,7 @@ const App = () => {
           removeFunction={(fieldKey) => {
               setFunctions(functions => {
                 const {[fieldKey]: omit, ...rest} = functions;
-                return rest;
+                return Object.keys(rest).length === 0 ? {'input-field-1': ''} : rest;
               });
             }
           }
