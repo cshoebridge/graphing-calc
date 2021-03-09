@@ -14,13 +14,17 @@ const FunctionField = ({fieldKey, changeFunction, removeFunction}) => {
  
   return (
     <div className="function-field-container">
-      <input 
+      <input className="function-in"
         type="text"
         value={content}
         onChange={(event) => {
           try {
             const newFunction = evaluate(event.target.value);
-            changeFunction(newFunction, fieldKey);
+            const testVal = newFunction(1);
+            console.log(testVal);
+            if (testVal && typeof testVal === 'number') {
+              changeFunction(newFunction, fieldKey);
+            }
           }
           catch (error) {
             console.log('invalid function syntax: ', event.target.value);

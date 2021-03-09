@@ -13,8 +13,18 @@
 
 .function-field-container {
     border: black 1px solid;
+    border-top: none;
     position: relative;
     padding: 5px;
+}
+
+.function-in {
+    color: black;
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 95%;
+    padding: 3% 0 3% 1%;
 }
 
 .field-delete {

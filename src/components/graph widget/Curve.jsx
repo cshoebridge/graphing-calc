@@ -34,7 +34,7 @@ const Curve = ({strokeWidth, color, func, domain, range}) => {
                 }`
             } 
             stroke={color}
-            strokeOpacity={0.5}
+            strokeOpacity={0.65}
             strokeWidth={strokeWidth}
             fill="none"
         />
