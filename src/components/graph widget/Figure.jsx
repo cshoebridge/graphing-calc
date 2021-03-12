@@ -2,6 +2,7 @@ import Axes from "./Axes/Axes.jsx"
 import Curve from "./Curve"
 import { Grid } from "./Grid";
 
+
 const CURVE_COLORS = ['red', 'blue', 'green', 'purple', 'orange', 'yellow', 'pink']
 
 
